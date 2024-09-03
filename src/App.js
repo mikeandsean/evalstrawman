@@ -12,10 +12,11 @@ function App() {
     sleepHours: '',
     sleepPatterns: '',
     phoneHours: '',
-    familyFriction: '',
-    friendMap: '',
-    enemyMap: '',
-    socialSuccess: '',
+    familyFriction: '5',
+    familyFrictionDetails: '',
+    friendFriction: '5',
+    friendFrictionDetails: '',
+    socialSuccess: '5',
     personalityTest: '',
     selfDescription: '',
     independence: ''
@@ -35,14 +36,16 @@ function App() {
         return (
           <div className="space-y-4">
             <div>
-              <label htmlFor="age" className="block text-sm font-medium text-gray-700">Age</label>
+              <label htmlFor="age" className="block text-sm font-medium text-white">Age</label>
               <input type="number" id="age" name="age" value={userData.age} onChange={handleInputChange}
-                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                     required />
             </div>
             <div>
-              <label htmlFor="gender" className="block text-sm font-medium text-gray-700">Gender</label>
+              <label htmlFor="gender" className="block text-sm font-medium text-white">Gender</label>
               <select id="gender" name="gender" value={userData.gender} onChange={handleInputChange}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                      required>
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -50,9 +53,10 @@ function App() {
               </select>
             </div>
             <div>
-              <label htmlFor="familyType" className="block text-sm font-medium text-gray-700">Family Type</label>
+              <label htmlFor="familyType" className="block text-sm font-medium text-white">Family Type</label>
               <select id="familyType" name="familyType" value={userData.familyType} onChange={handleInputChange}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                      required>
                 <option value="">Select family type</option>
                 <option value="two_parent">Two Parent</option>
                 <option value="single_parent">Single Parent</option>
@@ -60,9 +64,10 @@ function App() {
               </select>
             </div>
             <div>
-              <label htmlFor="socioeconomicStatus" className="block text-sm font-medium text-gray-700">Socioeconomic Status</label>
+              <label htmlFor="socioeconomicStatus" className="block text-sm font-medium text-white">Socioeconomic Status</label>
               <select id="socioeconomicStatus" name="socioeconomicStatus" value={userData.socioeconomicStatus} onChange={handleInputChange}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                      required>
                 <option value="">Select status</option>
                 <option value="low_income">Low Income</option>
                 <option value="middle_class">Middle Class</option>
@@ -75,29 +80,29 @@ function App() {
         return (
           <div className="space-y-4">
             <div>
-              <label htmlFor="exerciseRoutine" className="block text-sm font-medium text-gray-700">Describe your exercise routine</label>
+              <label htmlFor="exerciseRoutine" className="block text-sm font-medium text-white">Describe your exercise routine</label>
               <textarea id="exerciseRoutine" name="exerciseRoutine" rows="3" value={userData.exerciseRoutine} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"></textarea>
             </div>
             <div>
-              <label htmlFor="dailyActivity" className="block text-sm font-medium text-gray-700">How do you get activity throughout the day?</label>
+              <label htmlFor="dailyActivity" className="block text-sm font-medium text-white">How do you get activity throughout the day?</label>
               <textarea id="dailyActivity" name="dailyActivity" rows="3" value={userData.dailyActivity} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"></textarea>
             </div>
             <div>
-              <label htmlFor="sleepPatterns" className="block text-sm font-medium text-gray-700">Describe your sleep patterns</label>
+              <label htmlFor="sleepPatterns" className="block text-sm font-medium text-white">Describe your sleep patterns</label>
               <textarea id="sleepPatterns" name="sleepPatterns" rows="3" value={userData.sleepPatterns} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"></textarea>
             </div>
             <div>
-              <label htmlFor="sleepHours" className="block text-sm font-medium text-gray-700">Average Sleep Hours</label>
+              <label htmlFor="sleepHours" className="block text-sm font-medium text-white">Average Sleep Hours</label>
               <input type="number" id="sleepHours" name="sleepHours" value={userData.sleepHours} onChange={handleInputChange}
-                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"/>
             </div>
             <div>
-              <label htmlFor="phoneHours" className="block text-sm font-medium text-gray-700">Daily Phone Usage (hours)</label>
+              <label htmlFor="phoneHours" className="block text-sm font-medium text-white">Daily Phone Usage (hours)</label>
               <input type="number" id="phoneHours" name="phoneHours" value={userData.phoneHours} onChange={handleInputChange}
-                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"/>
             </div>
           </div>
         );
@@ -105,24 +110,34 @@ function App() {
         return (
           <div className="space-y-4">
             <div>
-              <label htmlFor="familyFriction" className="block text-sm font-medium text-gray-700">Family Friction (1-10)</label>
-              <input type="number" id="familyFriction" name="familyFriction" min="1" max="10" value={userData.familyFriction} onChange={handleInputChange}
-                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+              <label htmlFor="familyFriction" className="block text-sm font-medium text-white">
+                Family Friction (1-10): {userData.familyFriction}
+              </label>
+              <input type="range" id="familyFriction" name="familyFriction" min="1" max="10" value={userData.familyFriction} onChange={handleInputChange}
+                     className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring focus:ring-white"
+                     aria-label="Family Friction Scale"/>
+              <textarea id="familyFrictionDetails" name="familyFrictionDetails" rows="3" value={userData.familyFrictionDetails} onChange={handleInputChange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                        placeholder="How's it going in your family?"></textarea>
             </div>
             <div>
-              <label htmlFor="friendMap" className="block text-sm font-medium text-gray-700">Describe your friend network</label>
-              <textarea id="friendMap" name="friendMap" rows="3" value={userData.friendMap} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+              <label htmlFor="friendFriction" className="block text-sm font-medium text-white">
+                Friendship Status (1-10): {userData.friendFriction}
+              </label>
+              <input type="range" id="friendFriction" name="friendFriction" min="1" max="10" value={userData.friendFriction} onChange={handleInputChange}
+                     className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring focus:ring-white"
+                     aria-label="Friendship Status Scale"/>
+              <textarea id="friendFrictionDetails" name="friendFrictionDetails" rows="3" value={userData.friendFrictionDetails} onChange={handleInputChange}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
+                        placeholder="How's it going with your friends?"></textarea>
             </div>
             <div>
-              <label htmlFor="enemyMap" className="block text-sm font-medium text-gray-700">Describe any challenging relationships</label>
-              <textarea id="enemyMap" name="enemyMap" rows="3" value={userData.enemyMap} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
-            </div>
-            <div>
-              <label htmlFor="socialSuccess" className="block text-sm font-medium text-gray-700">Social Success (1-10)</label>
-              <input type="number" id="socialSuccess" name="socialSuccess" min="1" max="10" value={userData.socialSuccess} onChange={handleInputChange}
-                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+              <label htmlFor="socialSuccess" className="block text-sm font-medium text-white">
+                Social Success (1-10): {userData.socialSuccess}
+              </label>
+              <input type="range" id="socialSuccess" name="socialSuccess" min="1" max="10" value={userData.socialSuccess} onChange={handleInputChange}
+                     className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring focus:ring-white"
+                     aria-label="Social Success Scale"/>
             </div>
           </div>
         );
@@ -130,20 +145,25 @@ function App() {
         return (
           <div className="space-y-4">
             <div>
-              <label htmlFor="personalityTest" className="block text-sm font-medium text-gray-700">OCEAN Personality Test Results</label>
+              <label htmlFor="personalityTestLink" className="block text-sm font-medium text-white">Take the Personality Test</label>
+              <a href="https://bigfive-test.com/" target="_blank" rel="noopener noreferrer"
+                 className="text-blue-300 underline">Click here to take the OCEAN Personality Test</a>
+            </div>
+            <div>
+              <label htmlFor="personalityTest" className="block text-sm font-medium text-white">OCEAN Personality Test Results</label>
               <textarea id="personalityTest" name="personalityTest" rows="5" value={userData.personalityTest} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"
                         placeholder="Enter your OCEAN test results here..."></textarea>
             </div>
             <div>
-              <label htmlFor="selfDescription" className="block text-sm font-medium text-gray-700">How would you describe yourself?</label>
+              <label htmlFor="selfDescription" className="block text-sm font-medium text-white">How would you describe yourself?</label>
               <textarea id="selfDescription" name="selfDescription" rows="3" value={userData.selfDescription} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"></textarea>
             </div>
             <div>
-              <label htmlFor="independence" className="block text-sm font-medium text-gray-700">How independent are you?</label>
+              <label htmlFor="independence" className="block text-sm font-medium text-white">How independent are you?</label>
               <textarea id="independence" name="independence" rows="3" value={userData.independence} onChange={handleInputChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-white focus:ring focus:ring-white focus:ring-opacity-50 bg-gray-700 text-white"></textarea>
             </div>
           </div>
         );
@@ -152,22 +172,30 @@ function App() {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', userData);
+    // Here you would typically send the data to a server
+    alert('Assessment submitted successfully!');
+  };
+
   return (
-    <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+    <form onSubmit={handleSubmit} className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-black shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+        <div className="relative px-4 py-10 bg-black shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <h1 className="text-2xl font-semibold">Mike's Evaluation Tool</h1>
+              <h1 className="text-3xl font-bold text-white">Assessment</h1>
             </div>
-            <div className="divide-y divide-gray-200">
-              <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+            <div className="divide-y divide-gray-700">
+              <div className="py-8 text-base leading-6 space-y-4 text-white sm:text-lg sm:leading-7">
                 <div className="flex justify-between">
                   {['demographic', 'lifestyle', 'social', 'personality'].map((tab) => (
                     <button
                       key={tab}
-                      className={`px-2 py-1 rounded ${activeTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                      type="button"
+                      className={`px-2 py-1 rounded ${activeTab === tab ? 'bg-gray-700 text-white' : 'bg-gray-900 text-gray-400'}`}
                       onClick={() => setActiveTab(tab)}
                     >
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -177,10 +205,15 @@ function App() {
                 {renderTab(activeTab)}
               </div>
             </div>
+            <div className="mt-6">
+              <button type="submit" className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Submit Assessment
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }
 
