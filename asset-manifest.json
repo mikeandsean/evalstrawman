@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/evalstrawman/static/css/main.c16ab538.css",
+    "main.js": "/evalstrawman/static/js/main.a81a0ab4.js",
+    "static/js/453.0f726939.chunk.js": "/evalstrawman/static/js/453.0f726939.chunk.js",
+    "index.html": "/evalstrawman/index.html",
+    "main.c16ab538.css.map": "/evalstrawman/static/css/main.c16ab538.css.map",
+    "main.a81a0ab4.js.map": "/evalstrawman/static/js/main.a81a0ab4.js.map",
+    "453.0f726939.chunk.js.map": "/evalstrawman/static/js/453.0f726939.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c16ab538.css",
+    "static/js/main.a81a0ab4.js"
+  ]
+}
